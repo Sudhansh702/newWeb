@@ -1,0 +1,79 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        .bg-transparent {
+            background-color: rgba(0, 0, 0, 0.0);
+        }
+        .bg-darker {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body class="font-roboto bg-black >
+    <nav id="navbar" class="z-10 fixed w-full bg-transparent p-4 transition duration-300">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center">
+                <img alt="Company logo" class="h-8 w-8 mr-2" height="50" src="https://storage.googleapis.com/a1aa/image/wc1D6fTSzIWnbqZkWzbyKfrxhi41jRqyYGXd7xegGYPXJ2KnA.jpg" width="50"/>
+                <span class="text-white text-xl font-bold">KnG Group</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a class="text-white hover:text-gray-300" href="#">Home</a>
+                <div class="relative group">
+                    <a class="text-white hover:text-gray-300" href="#">Companies <i class="fas fa-chevron-down"></i></a>
+                    <div class="absolute hidden group-hover:block bg-white text-black mt-2 rounded shadow-lg">
+                        <a class="block px-4 py-2 hover:bg-gray-200" href="#">Company 1</a>
+                        <a class="block px-4 py-2 hover:bg-gray-200" href="#">Company 2</a>
+                        <a class="block px-4 py-2 hover:bg-gray-200" href="#">Company 3</a>
+                    </div>
+                </div>
+                <a class="text-white hover:text-gray-300" href="#">About Us</a>
+                <a class="text-blue-300 hover:text-blue-500" href="#">Media &amp; Projects</a>
+                <a class="text-white hover:text-gray-300" href="#">Career</a>
+                <a class="text-white hover:text-gray-300" href="#">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a class="block text-white hover:text-gray-300 py-2" href="#">Home</a>
+            <div class="relative group">
+                <a class="block text-white hover:text-gray-300 py-2" href="#">Companies <i class="fas fa-chevron-down"></i></a>
+                <div class="hidden group-hover:block bg-white text-black mt-2 rounded shadow-lg">
+                    <a class="block px-4 py-2 hover:bg-gray-200" href="#">Company 1</a>
+                    <a class="block px-4 py-2 hover:bg-gray-200" href="#">Company 2</a>
+                    <a class="block px-4 py-2 hover:bg-gray-200" href="#">Company 3</a>
+                </div>
+            </div>
+            <a class="block text-white hover:text-gray-300 py-2" href="#">About Us</a>
+            <a class="block text-blue-300 hover:text-blue-500 py-2" href="#">Media &amp; Projects</a>
+            <a class="block text-white hover:text-gray-300 py-2" href="#">Career</a>
+            <a class="block text-white hover:text-gray-300 py-2" href="#">Contact</a>
+        </div>
+    </nav>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navbar = document.getElementById('navbar');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-darker');
+                navbar.classList.remove('bg-transparent');
+            } else {
+                navbar.classList.add('bg-transparent');
+                navbar.classList.remove('bg-darker');
+            }
+        });
+    </script>
+</body>
+</html>

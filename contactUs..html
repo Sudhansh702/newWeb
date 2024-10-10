@@ -1,0 +1,280 @@
+<html>
+ <head>
+  <title>
+   Contact Us - KnG Group
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+        /* header */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        .bg-transparent {
+            background-color: rgba(0, 0, 0, 0.0);
+        }
+        .bg-darker {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+  </style>
+ </head>
+ <body class="bg-gray-100">
+    <!-- nav -->
+    <nav id="navbar" class=" z-10 fixed w-full bg-transparent p-4 transition duration-300">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center">
+                <img alt="Company logo" class="h-8 w-8 mr-2" height="50" src="https://storage.googleapis.com/a1aa/image/wc1D6fTSzIWnbqZkWzbyKfrxhi41jRqyYGXd7xegGYPXJ2KnA.jpg" width="50"/>
+                <span class="text-white text-xl font-bold">KnG Group</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a class="text-white hover:text-gray-300" href="#">Home</a>
+                <div class="relative group">
+                    <a class="text-white hover:text-gray-300" href="#">Companies <i class="fas fa-chevron-down"></i></a>
+                    <div class="absolute hidden group-hover:block bg-white text-black mt-2 rounded shadow-lg">
+                        <a class="block px-4 py-2 hover:bg-gray-200" href="#">Company 1</a>
+                        <a class="block px-4 py-2 hover:bg-gray-200" href="#">Company 2</a>
+                        <a class="block px-4 py-2 hover:bg-gray-200" href="#">Company 3</a>
+                    </div>
+                </div>
+                <a class="text-white hover:text-gray-300" href="about.html">About Us</a>
+                <a class="text-blue-300 hover:text-blue-500" href="#">Media &amp; Projects</a>
+                <a class="text-white hover:text-gray-300" href="#">Career</a>
+                <a class="text-white hover:text-gray-300" href="contactUs..html">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a class="block text-white hover:text-gray-300 py-2" href="index.html">Home</a>
+            <div class="relative group">
+                <a class="block text-white hover:text-gray-300 py-2" href="#">Companies <i class="fas fa-chevron-down"></i></a>
+                <div class="hidden group-hover:block bg-white text-black mt-2 rounded shadow-lg">
+                    <a class="block px-4 py-2 hover:bg-gray-200" href="#">Company 1</a>
+                    <a class="block px-4 py-2 hover:bg-gray-200" href="#">Company 2</a>
+                    <a class="block px-4 py-2 hover:bg-gray-200" href="#">Company 3</a>
+                </div>
+            </div>
+            <a class="block text-white hover:text-gray-300 py-2" href="about.html">About Us</a>
+            <a class="block text-blue-300 hover:text-blue-500 py-2" href="#">Media &amp; Projects</a>
+            <a class="block text-white hover:text-gray-300 py-2" href="#">Career</a>
+            <a class="block text-white hover:text-gray-300 py-2" href="contactUs..html">Contact</a>
+        </div>
+    </nav>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navbar = document.getElementById('navbar');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-darker');
+                navbar.classList.remove('bg-transparent');
+            } else {
+                navbar.classList.add('bg-transparent');
+                navbar.classList.remove('bg-darker');
+            }
+        });
+    </script>
+
+
+  <div class="relative">
+   <img alt="Office background with KnG Group logo" class="w-full h-64 object-cover" height="500" src="https://storage.googleapis.com/a1aa/image/VfLcND3TqFyiNCgnOhEQgh0YFUeSrXF97yAGIIhvaYMJ9alTA.jpg" width="1920"/>
+   <div class="absolute top-0 left-0 w-full h-64 bg-black opacity-50">
+   </div>
+   <div class="absolute top-0 left-0 w-full h-64 flex items-center justify-center">
+    <h1 class="text-white text-4xl font-bold">
+     Contact Us
+    </h1>
+   </div>
+  </div>
+  <div class="container mx-auto py-12 px-4">
+   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div>
+     <h2 class="text-2xl font-bold text-gray-800 mb-4">
+      Reach Out To Us
+     </h2>
+     <div class="bg-white p-6 rounded-lg shadow-lg mb-4">
+      <div class="flex items-center mb-4">
+       <i class="fas fa-map-marker-alt text-blue-500 text-2xl mr-4">
+       </i>
+       <span class="text-gray-700">
+        Brisbane / Gold Coast / Sydney / Melbourne / Delhi
+       </span>
+      </div>
+      <div class="flex items-center mb-4">
+       <i class="fas fa-phone-alt text-blue-500 text-2xl mr-4">
+       </i>
+       <span class="text-gray-700">
+        1300 417 415
+       </span>
+      </div>
+      <div class="flex items-center">
+       <i class="fas fa-envelope text-blue-500 text-2xl mr-4">
+       </i>
+       <span class="text-gray-700">
+        info@knggroup.com
+       </span>
+      </div>
+     </div>
+    </div>
+    <div>
+     <form class="bg-white p-6 rounded-lg shadow-lg">
+      <div class="mb-4">
+       <input class="w-full p-3 border border-gray-300 rounded-lg" placeholder="Your Name.." type="text"/>
+      </div>
+      <div class="mb-4">
+       <input class="w-full p-3 border border-gray-300 rounded-lg" placeholder="Your Email.." type="email"/>
+      </div>
+      <div class="mb-4 flex space-x-4">
+       <input class="w-1/2 p-3 border border-gray-300 rounded-lg" placeholder="Phone No.." type="text"/>
+       <input class="w-1/2 p-3 border border-gray-300 rounded-lg" placeholder="Your Subject.." type="text"/>
+      </div>
+      <div class="mb-4">
+       <textarea class="w-full p-3 border border-gray-300 rounded-lg h-32" placeholder="Enter Your Message.."></textarea>
+      </div>
+      <button class="w-full bg-blue-500 text-white p-3 rounded-lg font-bold" type="submit">
+       SEND MESSAGE
+      </button>
+     </form>
+    </div>
+   </div>
+  </div>
+  <!-- Footer -->
+  <div class="bg-gray-900 text-white">
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-4 text-blue-400">
+                        Companies
+                    </h3>
+                    <ul>
+                        <li class="mb-2 flex items-center">
+                            <img alt="KnG Healthcare logo" class="mr-2" height="20"
+                                src="https://storage.googleapis.com/a1aa/image/2LXUvfbgzjQDT6WzO3y0zIkaHgrsprEaqBpd4hVeLnVFrZlTA.jpg"
+                                width="20" />
+                            KnG Healthcare
+                        </li>
+                        <li class="mb-2 flex items-center">
+                            <img alt="KnG Gold Care logo" class="mr-2" height="20"
+                                src="https://storage.googleapis.com/a1aa/image/GfSe5FkOCUqadkYAAIqBFeXk3eaAkbdvvvedcZEkYWEWYNrcC.jpg"
+                                width="20" />
+                            KnG Gold Care
+                        </li>
+                        <li class="mb-2 flex items-center">
+                            <img alt="KnG Education logo" class="mr-2" height="20"
+                                src="https://storage.googleapis.com/a1aa/image/ALQoVpCwjfU5Yq9kAeR2VyFy5WfycT41zUASEZTHzhVfrmVOB.jpg"
+                                width="20" />
+                            KnG Education
+                        </li>
+                        <li class="mb-2 flex items-center">
+                            <img alt="KnG Security logo" class="mr-2" height="20"
+                                src="https://storage.googleapis.com/a1aa/image/KNMtI0XBeL2cK6LYizDUAZ7NzMfjyIoLJavcO2mm4bAErZlTA.jpg"
+                                width="20" />
+                            KnG Security
+                        </li>
+                        <li class="mb-2 flex items-center">
+                            <img alt="KnG Tech logo" class="mr-2" height="20"
+                                src="https://storage.googleapis.com/a1aa/image/KPdbNmLC6spwE96ZIcK8OAuD06Eq41YZshqk0cThQUcwaW5E.jpg"
+                                width="20" />
+                            KnG Tech
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-4 text-blue-400">
+                        Important Links
+                    </h3>
+                    <ul>
+                        <li class="mb-2">
+                            Media &amp; Projects
+                        </li>
+                        <li class="mb-2">
+                            Privacy Policy
+                        </li>
+                        <li class="mb-2">
+                            Cookies Policy
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-4 text-blue-400">
+                        Contact Info
+                    </h3>
+                    <ul>
+                        <li class="mb-2 flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2">
+                            </i>
+                            Brisbane / Gold Coast / Sydney / Melbourne / Delhi
+                        </li>
+                        <li class="mb-2 flex items-center">
+                            <i class="fas fa-phone-alt mr-2">
+                            </i>
+                            1300 417 415
+                        </li>
+                        <li class="mb-2 flex items-center">
+                            <i class="fas fa-envelope mr-2">
+                            </i>
+                            info@knggroup.com
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4">
+                    <h3 class="text-lg font-semibold mb-4 text-blue-400">
+                        Subscribe Now
+                    </h3>
+                    <p class="mb-4">
+                        Don't miss our future updates! Get Subscribed Today!
+                    </p>
+                    <div class="flex">
+                        <input class="p-2 rounded-l-lg text-gray-900" placeholder="Your mail here" type="email" />
+                        <button class="bg-blue-500 p-2 rounded-r-lg">
+                            <i class="fas fa-envelope text-white">
+                            </i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-between items-center mt-8 border-t border-gray-700 pt-4">
+                <p class="text-sm">
+                    © 2024 - KnG Group ®
+                </p>
+                <div class="flex space-x-4">
+                    <a class="text-white" href="#">
+                        <i class="fab fa-facebook-f">
+                        </i>
+                    </a>
+                    <a class="text-white" href="#">
+                        <i class="fab fa-instagram">
+                        </i>
+                    </a>
+                    <a class="text-white" href="#">
+                        <i class="fab fa-linkedin-in">
+                        </i>
+                    </a>
+                </div>
+            </div>
+            <p class="text-xs mt-4">
+                As we proceed with our endeavours, we take this moment to acknowledge and pay our respects to the
+                Traditional Owners of the land on which we live and work. We recognise the rich history, culture,
+                and
+                ongoing connection to Country of the Australian Indigenous communities.
+                <a class="text-blue-400" href="#">
+                    Read more
+                </a>
+            </p>
+        </div>
+    </footer>
+</div>
+ </body>
+</html>
